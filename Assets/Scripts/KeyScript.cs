@@ -12,7 +12,7 @@ public class KeyScript : MonoBehaviour {
 			{
 				Destroy(lockedBlocks[i]);
 			}
-			audio.Play ();
+			GetComponent<AudioSource>().Play ();
 			Destroy (gameObject);
 		} 
 

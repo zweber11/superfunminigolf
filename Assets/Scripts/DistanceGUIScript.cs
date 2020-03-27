@@ -10,6 +10,6 @@ public class DistanceGUIScript : MonoBehaviour {
 
 	void Update () 
 	{
-		guiText.text = "Disance: " + (Mathf.Round (GameControl.control.totalDistance)) + " in.";
+		GetComponent<GUIText>().text = "Disance: " + (Mathf.Round (GameControl.control.totalDistance)) + " in.";
 	}
 }

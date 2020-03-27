@@ -47,9 +47,9 @@ public class HitScript : MonoBehaviour {
 		//IF the mouse button was clicked inside and then outside of the ball's raius then add force
 		if ((didMouseUp && didMouseDown) && (Vector2.Distance(ballPosition, releasePosition) > ballRadius))
 		{
-			rigidbody2D.AddForce ((ballPosition - releasePosition) * forceMulitplier);
+			GetComponent<Rigidbody2D>().AddForce ((ballPosition - releasePosition) * forceMulitplier);
 //			Debug.Log ("total force before multiplier: " + (ballPosition - releasePosition)* forceMulitplier);
-			audio.Play ();
+			GetComponent<AudioSource>().Play ();
 			ResetMouse();
 			GameControl.control.strokes++;
 			var gameInst = GameObject.Find("Instructions");

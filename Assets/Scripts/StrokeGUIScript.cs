@@ -10,6 +10,6 @@ public class StrokeGUIScript : MonoBehaviour {
 
 	void Update () 
 	{
-		guiText.text = "Stokes: " + GameControl.control.strokes;
+		GetComponent<GUIText>().text = "Stokes: " + GameControl.control.strokes;
 	}
 }
